@@ -1,3 +1,15 @@
+def conver(currency_type, dollar_value):
+    pesos = input("Cuántos "+currency_type+" tienes?: ")
+    pesos = float(pesos)
+
+    valor_dolar = dollar_value
+    dolares = pesos / valor_dolar
+    dolares = round(dolares, 2)
+
+    dolares = str(dolares)
+
+    print("Tienes $"+dolares+ " dolares")
+
 menu = """
 Bienvenido al conversor de monedas ❤
 
@@ -9,39 +21,14 @@ Elige una opción: """
 
 opcion = int(input(menu))
 
+
+
 if opcion == 1:
-    pesos = input("Cuántos Quetzales tienes?: ")
-    pesos = float(pesos)
-
-    valor_dolar = 7.7
-    dolares = pesos / valor_dolar
-    dolares = round(dolares, 2)
-
-    dolares = str(dolares)
-
-    print("Tienes $"+dolares+ " dolares")
+    conver("quetzales", 7.7)
 elif opcion == 2:
-    pesos = input("Cuántos pesos argentinos tienes?: ")
-    pesos = float(pesos)
-
-    valor_dolar = 65
-    dolares = pesos / valor_dolar
-    dolares = round(dolares, 2)
-
-    dolares = str(dolares)
-
-    print("Tienes $"+dolares+ " dolares")
+    conver("pesos argentinos", 65)
 elif opcion ==3:
-    pesos = input("Cuántos pesos mexicanos tienes tienes?: ")
-    pesos = float(pesos)
-
-    valor_dolar = 24
-    dolares = pesos / valor_dolar
-    dolares = round(dolares, 2)
-
-    dolares = str(dolares)
-
-    print("Tienes $"+dolares+ " dolares")
+    conver("pesos mexicanos", 24)
 else:
     print("Ingrese una opción valida")
 
